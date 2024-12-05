@@ -1,0 +1,37 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1; /* Background color for the body */
+    color: #333; /* Text color */
+}
+
+/* Styling the header */
+header h1 {
+    text-align: center; /* Align text to the center */
+    text-transform: uppercase; /* Transform text to uppercase */
+    color: #4CAF50; /* Green color */
+    background-color: #fff; /* White background */
+    padding: 20px;
+    margin-top: 50px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Text shadow */
+    direction: ltr; /* Text direction from left to right */
+}
+
+/* Styling the product description paragraph */
+.product-description p {
+    text-indent: 30px; /* Indent the paragraph */
+    text-align: justify; /* Justify the text */
+    letter-spacing: 1px; /* Set space between characters */
+    line-height: 1.8; /* Set line height */
+    word-spacing: 5px; /* Set space between words */
+    color: #555; /* Dark gray color for text */
+    background-color: #fff; /* White background */
+    max-width: 800px;
+    margin: 20px auto;
+    white-space: normal; /* Allow text to wrap normally */
+    direction: ltr; /* Text direction from left to right */
+    padding: 10px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Text shadow */
+}

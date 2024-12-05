@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrimony Website</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+            background-color: #111;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7));
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin: 5px 0;
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        section {
+            padding: 40px 20px;
+            margin: 20px 0;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .form-section {
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+            border: 1px solid #444;
+        }
+
+        .form-section h2 {
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            color: #ffd700;
+        }
+
+        input[type="text"], select {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #555;
+            border-radius: 5px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        input[type="text"]:focus, select:focus {
+            border-color: #ffd700;
+            outline: none;
+        }
+
+        .form-section label {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .tags-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .tag {
+            display: flex;
+            align-items: center;
+            background-color: #333;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #555;
+            color: #fff;
+        }
+
+        .tag input {
+            margin-right: 10px;
+        }
+
+        .submit-btn {
+            background-color: #ffd700;
+            color: #333;
+            padding: 15px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            margin-top: 20px;
+        }
+
+        .submit-btn:hover {
+            background-color: #ffcc00;
+        }
+
+        .tag:hover, .submit-btn:hover {
+            opacity: 0.9;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .form-section {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Matrimony Profiles</h1>
+        <p>Find Your Perfect Match</p>
+    </header>
+
+    <section id="search">
+        <div class="container form-section">
+            <h2>Filter Profiles by Criteria</h2>
+            <form action="#" method="post">
+                <div>
+                    <label for="gender">Gender:</label>
+                    <select name="gender" id="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="Name">Name:</label>
+                    <input type="text" id="Name" name="Name" placeholder="e.g., Pratik">
+                </div>
+                <div>
+                    <label for="age">Age Range:</label>
+                    <input type="text" id="age" name="age" placeholder="e.g., 25-30">
+                </div>
+
+                <div>
+                    <label for="location">Location:</label>
+                    <input type="text" id="location" name="location" placeholder="City, Country">
+                </div>
+
+                <div>
+                    <label for="religion">Religion:</label>
+                    <input type="text" id="religion" name="religion" placeholder="e.g., Hindu">
+                </div>
+
+                <div>
+                    <label for="caste">Caste:</label>
+                    <input type="text" id="caste" name="caste" placeholder="e.g., Brahmin">
+                </div>
+
+                <div>
+                    <label for="education">Education Level:</label>
+                    <input type="text" id="education" name="education" placeholder="e.g., Master's degree">
+                </div>
+
+                <div>
+                    <label for="profession">Profession:</label>
+                    <input type="text" id="profession" name="profession" placeholder="e.g., Engineer">
+                </div>
+
+                <div>
+                    <label for="language">Languages Spoken:</label>
+                    <input type="text" id="language" name="language" placeholder="e.g., English, Hindi">
+                </div>
+
+                <div>
+                    <label for="height">Height:</label>
+                    <input type="text" id="height" name="height" placeholder="e.g., 5'6"">
+                </div>
+
+                <div class="tags-container">
+                    <label>Choose Your Preferences:</label>
+                    <div class="tag">
+                        <input type="checkbox" id="tag1" name="tags" value="Non-Vegetarian">
+                        <label for="tag1">Non-Vegetarian</label>
+                    </div>
+                    <div class="tag">
+                        <input type="checkbox" id="tag2" name="tags" value="Vegetarian">
+                        <label for="tag2">Vegetarian</label>
+                    </div>
+                    <div class="tag">
+                        <input type="checkbox" id="tag3" name="tags" value="Dowry-Free">
+                        <label for="tag3">Dowry-Free</label>
+                    </div>
+                    <div class="tag">
+                        <input type="checkbox" id="tag4" name="tags" value="Smoke-Free">
+                        <label for="tag4">Smoke-Free</label>
+                    </div>
+                    <div class="tag">
+                        <input type="checkbox" id="tag5" name="tags" value="Alcohol-Free">
+                        <label for="tag5">Alcohol-Free</label>
+                    </div>
+                    <div class="tag">
+                        <input type="checkbox" id="tag6" name="tags" value="Pet Lover">
+                        <label for="tag6">Pet Lover</label>
+                    </div>
+                    <div class="tag">
+                        <input type="checkbox" id="tag7" name="tags" value="Family-Oriented">
+                        <label for="tag7">Family-Oriented</label>
+                    </div>
+                    <div class="tag">
+                        <input type="checkbox" id="tag8" name="tags" value="Religious">
+                        <label for="tag8">Religious</label>
+                    </div>
+                    <div class="tag">
+                        <input type="checkbox" id="tag9" name="tags" value="Travelling">
+                        <label for="tag9">Travelling</label>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">Search Profiles</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Matrimony Website. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
